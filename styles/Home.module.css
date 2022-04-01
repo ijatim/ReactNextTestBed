@@ -5,6 +5,14 @@
 .null {
 }
 
+.circleButton {
+  border: none;
+  color: pink;
+  height: 50px;
+  border-radius: 50%;
+  width: 50px;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;

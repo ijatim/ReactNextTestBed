@@ -54,7 +54,7 @@ export default function Home() {
                         Click HERE
                     </button>
                     <CircleButton/>
-                    <IconButton onClick={()=> console.log('IconButton Clicked')} disabled={false} icon={"/favicon.ico"}/>
+                    <IconButton className={styles.circleButton} onClick={()=> console.log('IconButton Clicked')} disabled={false} icon={"/favicon.ico"}/>
                 </motion.div>
 
                 <p className={styles.description}>
