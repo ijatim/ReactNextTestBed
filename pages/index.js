@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import {motion} from "framer-motion";
 import CircleButton from "../components/circle_button";
 import IconButton from "../components/icon_button";
+import { FaBeer } from 'react-icons/fa';
+
 
 export default function Home() {
     return (
@@ -54,8 +56,28 @@ export default function Home() {
                         Click HERE
                     </button>
                     <CircleButton/>
-                    <IconButton className={styles.circleButton} onClick={()=> console.log('IconButton Clicked')} disabled={false} icon={"/favicon.ico"}/>
+                    <IconButton className={styles.circleButton} onClick={() => console.log('IconButton Clicked')}
+                                disabled={false} icon={"/favicon.ico"}/>
                 </motion.div>
+
+                <div className={styles.game__board}>
+                {
+                    [...Array(9)].map((v, idx) => {
+                            return (
+                                <div
+                                    key={idx}
+                                    onClick={()=> console.log('clicked div')}
+                                    className="square">
+                                    X
+                                </div>
+                            );
+                        }
+                    )
+                }
+                </div>
+
+
+                <FaBeer onClick={()=> console.log('abcd')}/>
 
                 <p className={styles.description}>
                     Get started by editing{' '}
